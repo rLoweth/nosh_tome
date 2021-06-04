@@ -104,7 +104,10 @@ class Recipe extends React.Component {
               />
             </div>
             <div className="col-sm-12 col-lg-2">
-              <button type="button" className="btn btn-danger" onClick={this.deleteRecipe}>
+              <Link to={`/recipes/${this.props.match.params.id}/edit`} className="btn btn-warning mr-2">
+                Edit Recipe
+              </Link>
+              <button type="button" className="btn btn-danger" onClick={this.deleteRecipe} data-confirm="Do you really want to remove this recipe?">
                 Delete Recipe
               </button>
             </div>
